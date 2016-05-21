@@ -1,0 +1,11 @@
+{
+  "name": "catslist",
+  "version": "1.0.0",
+  "description": "List your cats, lend your cats, borrow others' cats",
+  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "postinstall": "curl -s https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/install | bash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
