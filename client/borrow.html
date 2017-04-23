@@ -1,0 +1,66 @@
+<!-- index.html -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue</title>
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+<body>
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand">Vue Puppies</a>
+    </div>
+  </nav>
+
+  <div class="container" id="puppies">
+
+    <div  class="row" :style="{marginTop: '50px', textAlign:'center'}" v-for="puppy in puppies">
+      <!-- <a href="#" v-for="puppy in puppies" :style="{textAlign:'center'}"> -->
+
+        <div class="col-md-4">
+        <h4>
+          {{ puppy.name }}
+        </h4>
+
+        <img :src="puppy.image" :style="styleImage">
+        </div>
+
+        <div class="col-md-8">
+        <h5>
+          {{ puppy.owner }}
+        </h5>
+
+        <p>{{ puppy.description }}</p>
+        </div>
+        <!-- <p class="list-group-item-text" v-if="event.description">{{ puppy.description }}</p> -->
+
+        <!-- <button class="btn btn-xs btn-danger" v-on="click: deleteEvent($index)">Delete</button> -->
+      <!-- </a> -->
+    </div>
+
+
+  </div>
+
+  
+
+  <!-- JS -->
+  <!-- <script src="/node_modules/vue/dist/vue.js"></script> -->
+  <script src="https://unpkg.com/vue"></script>
+  <!-- <script src="/node_modules/vue-resource/dist/vue-resource.js"></script> -->
+
+  <!-- <script src="vue.js"></script> -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
