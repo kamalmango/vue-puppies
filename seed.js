@@ -20,7 +20,6 @@ Puppy.collection.drop();
 // Step 2: Add data from `data.json`
 // TODO
 data.forEach(function(pup) {
-  console.log('I am here');
   var fluffy = new Puppy(pup);
   fluffy.save(function(err, fluffy) {
     if (err) {

@@ -1,8 +1,8 @@
 Vue.component('nav-bar', {
   template: `
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default :style="{backgroundColor: 'white', border: 'none'}"">
       <div class="container-fluid">
-        <a class="navbar-brand">Vue Puppies</a>
+        <p class="navbar-brand">Vue Puppies</p>
         <a class="navbar-brand" href="index.html">Lend</a>
         <a class="navbar-brand" href="borrow.html">Borrow</a>
       </div>
@@ -40,6 +40,10 @@ Vue.component('form-add', {
       })
       .then(function(response) {
         console.log(response);
+        vm.puppy.name = '';
+        vm.puppy.owner = '';
+        vm.puppy.image = '';
+        vm.puppy.description = '';
       })
       .catch(function(error) {
         console.log(error);
@@ -48,18 +52,18 @@ Vue.component('form-add', {
   }
 })
 
-Vue.component('puppy-card', {
+Vue.component('info-card', {
   props: ['puppy'],
   template: `
-    <div class="row" :style="{marginTop: '50px', textAlign:'center', boxShadow: '0 2px 10px 0 rgba(88, 88, 88, 0.3)'}">
-      <div class="col-md-4">
+    <div class="row" :style="{marginTop: '25px', marginBottom: '25px', textAlign:'center', boxShadow: '0 2px 10px 0 rgba(88, 88, 88, 0.3)'}">
+      <div class="col-md-4" :style="{marginTop: '10px'}">
         <h4>
           {{ puppy.name }}
         </h4>
         <img :src="puppy.image" :style="styleImage">
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-8" :style="{marginTop: '50px'}">
         <h5>
           {{ puppy.owner }}
         </h5>
@@ -71,7 +75,8 @@ Vue.component('puppy-card', {
     return {
       styleImage: {
         height: '300px',
-        width: '300px'
+        width: '300px',
+        marginBottom: '30px'
       }
     }
   }

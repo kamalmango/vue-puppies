@@ -9,9 +9,8 @@
 <body>
   <div class="container" id="lend">
     <nav-bar></nav-bar>
-    <puppy-card v-for="item in puppies" :puppy="item"></puppy-card>
+    <info-card v-for="item in puppies" :puppy="item"></info-card>
   </div>
-  <!-- <button class="btn btn-xs btn-danger" v-on="click: deleteEvent($index)">Delete</button> -->
   <!-- JS -->
   <script src="https://unpkg.com/vue"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
