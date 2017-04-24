@@ -3,6 +3,8 @@ Vue.component('nav-bar', {
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <a class="navbar-brand">Vue Puppies</a>
+        <a class="navbar-brand" href="index.html">Lend</a>
+        <a class="navbar-brand" href="borrow.html">Borrow</a>
       </div>
     </nav>
   `
