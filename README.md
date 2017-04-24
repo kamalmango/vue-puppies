@@ -1,7 +1,11 @@
 How to run:
+Make sure you have MongoDB installed
 
 to install dependencies:
 npm install
+
+to start the database:
+mongod
 
 to seed the database:
 npm run build
